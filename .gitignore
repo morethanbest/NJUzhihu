@@ -1,3 +1,4 @@
+
 # Windows
 [Dd]esktop.ini
 Thumbs.db
@@ -12,3 +13,38 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+
+# kdiff3 ignore
+*.orig
+
+# maven ignore
+target/
+out/
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# package ignore (optional)
+# *.jar
+# *.war
+# *.zip
+# *.tar
+# *.tar.gz
+
+# pods ignore
+Pods/

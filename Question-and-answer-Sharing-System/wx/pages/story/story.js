@@ -122,7 +122,7 @@ Page({
     if ($data.isfree == 0) {
       wx.showModal({
         title: '支付1元ing',
-        content: '亲，确认偷看ta的故事吗',
+        content: '亲，确认查看ta的故事吗',
         success: function (res) {
           if (res.confirm) {
             wx.navigateTo({

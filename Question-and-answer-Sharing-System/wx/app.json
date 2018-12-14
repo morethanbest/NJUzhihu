@@ -21,7 +21,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "backgroundColor": "#eee",
-    "navigationBarBackgroundColor": "#FFA54F",
+    "navigationBarBackgroundColor": "#7F0080",
     "navigationBarTitleText": "个人中心",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
@@ -29,7 +29,7 @@
 
   "tabBar": {
     "color": "#626567",
-    "selectedColor": "#FFA54F",
+    "selectedColor": "#7F0080",
     "backgroundColor": "#FBFBFB",
     "borderStyle": "white",
     "list": [
@@ -53,7 +53,7 @@
       },
       {
         "pagePath": "pages/search/search",
-        "text": "寻ta",
+        "text": "寻人",
         "iconPath": "images/bussiness-card.png",
         "selectedIconPath": "images/bussiness-card_focus.png"
       },

@@ -39,7 +39,7 @@ page {
 .top-tab {
   width: 750rpx;
   height: 100rpx;
-  background: #ff8247;
+  background: #7F0080;
   color: #8ccefd;
   font-size: 28rpx;
   line-height: 100rpx;

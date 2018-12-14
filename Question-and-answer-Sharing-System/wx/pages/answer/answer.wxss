@@ -73,7 +73,7 @@
 }
 
 .quiz-info {
-  color: #ffa54f;
+  color: #932abd;
   padding: 30rpx;
   font-size: 24rpx;
 }
@@ -109,12 +109,12 @@
 .quiz-cost {
   margin: 20rpx;
   font-size: 30rpx;
-  color: #ffa54f;
+  color: #932abd;
 }
 
 .submit {
   padding: 8rpx 35rpx;
-  background-color: #ffa54f;
+  background-color: #932abd;
   color: #fff;
   font-size: 22rpx;
   border-radius: 10rpx;

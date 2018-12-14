@@ -5,7 +5,7 @@
 .top-tab {
   width: 750rpx;
   height: 50rpx;
-  background: #ff8247;
+  background: #7F0080;
   color: #cfcfcf;
   font-size: 24rpx;
   align-items: center;
@@ -23,12 +23,12 @@
   height: 65rpx;
   margin-top: 45rpx;
   padding: 12.5rpx 0 12.5rpx 15rpx;
-  background: #ff8247;
+  background: #7F0080;
 }
 
 .container .search-left {
   flex: 8;
-  background: #ff8247;
+  background: #7F0080;
   text-align: left;
 }
 

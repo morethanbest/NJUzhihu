@@ -23,7 +23,7 @@
   margin: 15rpx auto;
   padding: 20rpx 25rpx;
   border-radius: 10rpx;
-  background-color: #ffa54f;
+  background-color: #932abd;
   color: #fff;
   letter-spacing: 1px;
 }

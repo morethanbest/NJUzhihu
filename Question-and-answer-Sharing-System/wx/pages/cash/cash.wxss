@@ -47,7 +47,7 @@
 
 .submit {
   padding: 8rpx 35rpx;
-  background-color: #ffa54f;
+  background-color: #932abd;
   color: #fff;
   font-size: 24rpx;
   border-radius: 10rpx;

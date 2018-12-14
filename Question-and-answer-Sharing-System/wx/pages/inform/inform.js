@@ -60,7 +60,7 @@ Page({
     if (e.ques_is_free == 0) {
       wx.showModal({
         title: '支付1元ing',
-        content: '亲，确认偷看ta的回答吗',
+        content: '亲，确认查看ta的回答吗',
         success: function (res) {
           if (res.confirm) {
             wx.getUserInfo({

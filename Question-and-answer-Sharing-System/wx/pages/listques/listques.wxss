@@ -6,12 +6,12 @@
   width: 735rpx;
   height: 65rpx;
   padding: 12.5rpx 0 12.5rpx 15rpx;
-  background: #ff8247;
+  background: #7F0080;
 }
 
 .container .search-left {
   flex: 8;
-  background: #ff8247;
+  background: #7F0080;
   text-align: left;
 }
 

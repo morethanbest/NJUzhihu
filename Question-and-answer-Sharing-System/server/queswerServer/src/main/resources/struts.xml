@@ -195,6 +195,5 @@
 			<result name="input">/index.jsp</result>
 			<result name="error">/index.jsp</result>
 		</action>
-
 	</package>
 </struts>

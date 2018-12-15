@@ -114,19 +114,24 @@ public class FollowAction extends ActionSupport {
 		myname = request.getParameter("myname");
 		User user_followed = userService.findByName(hisname);
 		User user_mine = userService.findByName(myname);
-		follow = new Follow(user_mine.getId(), user_followed.getId());
-		user_followed.setFans(user_followed.getFans() + 1);
-		userService.updateUser(user_followed);
-		followService.addFollow(follow);
+		boolean isSelf = user_mine.getId().intValue() == user_followed.getId().intValue();
+		if(isSelf) return ERROR;
+		else if(followService.findFollow(user_followed.getId(), user_mine.getId()) != null) return ERROR;
+		else {
+			follow = new Follow(user_mine.getId(), user_followed.getId());
+			user_followed.setFans(user_followed.getFans() + 1);
+			userService.updateUser(user_followed);
+			followService.addFollow(follow);
 
-		Message message = new Message();
-		message.setType(3);
-		message.setFrom_userid(user_mine.getId());
-		message.setIsread(1);
-		message.setUser(user_followed);
-		messageService.addMessage(message);
+			Message message = new Message();
+			message.setType(3);
+			message.setFrom_userid(user_mine.getId());
+			message.setIsread(1);
+			message.setUser(user_followed);
+			messageService.addMessage(message);
 
-		return SUCCESS;
+			return SUCCESS;
+		}
 	}
 
 	/**

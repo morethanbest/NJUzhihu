@@ -148,7 +148,7 @@ public class QuestionAction extends ActionSupport {
 			question.setIs_free(Integer.parseInt(is_free));
 			User user = userService.findByName(ques_userName);
 
-			question.setCreateTime(ft.format(dNow).toString());
+			question.setCreateTime(ft.format(dNow));
 			question.setUser(user);
 			questionService.addQuestion(question);
 
@@ -189,11 +189,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());
@@ -245,11 +245,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());
@@ -301,11 +301,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());
@@ -357,11 +357,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());
@@ -370,7 +370,7 @@ public class QuestionAction extends ActionSupport {
 				jso.add(jsond);
 			} else {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
@@ -408,11 +408,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());
@@ -452,7 +452,7 @@ public class QuestionAction extends ActionSupport {
 		}
 		jsond.put("ques_isanswer", isanswer);
 		jsond.put("ques_content", questionTemp.getContent());
-		jsond.put("ques_time", questionTemp.getCreateTime().toString());
+		jsond.put("ques_time", questionTemp.getCreateTime());
 		jsond.put("ques_is_free", questionTemp.getIs_free());
 		jsond.put("ques_username", questionTemp.getUser().getUsername());
 		jsond.put("ques_img", questionTemp.getUser().getAvatarUrl());
@@ -486,11 +486,11 @@ public class QuestionAction extends ActionSupport {
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
 				jsond.put("ques_content", question.getContent());
-				jsond.put("ques_time", question.getCreateTime().toString());
+				jsond.put("ques_time", question.getCreateTime());
 				jsond.put("ques_is_free", question.getIs_free());
 				jsond.put("ques_username", question.getUser().getUsername());
 				jsond.put("ques_img", question.getUser().getAvatarUrl());
-				jsond.put("ans_time", answer.getCreateTime().toString());
+				jsond.put("ans_time", answer.getCreateTime());
 				jsond.put("ans_content", answer.getContent());
 				jsond.put("ans_liked", answer.getLikedCount());
 				jsond.put("ans_username", answer.getUser().getUsername());

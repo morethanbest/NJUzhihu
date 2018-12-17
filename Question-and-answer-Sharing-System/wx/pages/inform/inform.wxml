@@ -6,10 +6,10 @@
         <view class="ques-user" wx:if="{{ques_is_free == 3}}">我的提问</view>
         <view class="ques-user" wx:if="{{ques_is_free != 3}}">{{quesname}} 提问</view>
         <view wx:if="{{ques_is_free==0}}">
-          <view class="ques-cost">￥1</view>
+          <view class="ques-cost">私密</view>
         </view>
         <view wx:elif="{{ques_is_free==1}}">
-          <view class="ques-cost">免费</view>
+          <view class="ques-cost">公开</view>
         </view>
       </view>
     </view>
@@ -26,11 +26,8 @@
       </view>
     </view>
     <view class="ques-content" wx:if="{{is_answer==1}}">
-      <text decode="{{true}}" wx:if="{{isok>0}}">
+      <text decode="{{true}}" wx:if="{{isok>=0}}">
       \n &nbsp;&nbsp; &nbsp;&nbsp;{{anscontent}}
-    </text>
-      <text decode="{{true}}" wx:if="{{isok==0}}">
-      \n &nbsp;&nbsp; &nbsp;&nbsp;亲，付费后才能显示哦~
     </text>
     </view>
     <view class="ques-content" wx:if="{{is_answer==0}}">

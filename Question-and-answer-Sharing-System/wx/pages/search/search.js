@@ -20,6 +20,12 @@ Page({
     this.refresh();
   },
 
+  onHide: function () {
+    this.setData({
+      person: null,
+    })
+  },
+
   searchPerson:function(e) {
     var that = this;
     this.setData({

@@ -57,58 +57,58 @@ Page({
       userInfo: app.globalData.userInfo
     })
     console.log(that.data.userInfo)
-    if (e.ques_is_free == 0) {
-      wx.showModal({
-        title: '支付1元ing',
-        content: '亲，确认查看ta的回答吗',
-        success: function (res) {
-          if (res.confirm) {
-            wx.getUserInfo({
-              success: function (res) {
-                wx.request({
-                  url: 'http://stupidant.cn/queswerServer/updateAccount',
-                  data: {
-                    'user.username': res.userInfo.nickName,
-                  },
-                  header: {//请求头
-                    "Content-Type": "applciation/json"
-                  },
-                  method: "GET",
-                  success: function (e) {
-                    console.log(e.data.isok + "..*.")
-                    that.setData({
-                      isok: e.data.isok
-                    })
-                    if (e.data.isok == 0) {
-                      wx.showToast({
-                        title: '金币不足！',
-                        icon: 'loading',
-                        duration: 2000,
-                        success: function () {
-                          setTimeout(function () {
-                            wx.switchTab({
-                              url: '../index/index'
-                            })
-                          }, 2000)
-                        }
-                      })
-                    }
-                  },
-                })
-              }
-            })
-          } else if (res.cancel) {
-            that.setData({
-              isok: 0,
-            })
-          }
-        }
-      })
-    } else {
+    // if (e.ques_is_free == 0) {
+    //   wx.showModal({
+    //     title: '支付1元ing',
+    //     content: '亲，确认查看ta的回答吗',
+    //     success: function (res) {
+    //       if (res.confirm) {
+    //         wx.getUserInfo({
+    //           success: function (res) {
+    //             wx.request({
+    //               url: 'http://' + hostConfig + '/queswerServer/updateAccount',
+    //               data: {
+    //                 'user.username': res.userInfo.nickName,
+    //               },
+    //               header: {//请求头
+    //                 "Content-Type": "applciation/json"
+    //               },
+    //               method: "GET",
+    //               success: function (e) {
+    //                 console.log(e.data.isok + "..*.")
+    //                 that.setData({
+    //                   isok: e.data.isok
+    //                 })
+    //                 if (e.data.isok == 0) {
+    //                   wx.showToast({
+    //                     title: '金币不足！',
+    //                     icon: 'loading',
+    //                     duration: 2000,
+    //                     success: function () {
+    //                       setTimeout(function () {
+    //                         wx.switchTab({
+    //                           url: '../index/index'
+    //                         })
+    //                       }, 2000)
+    //                     }
+    //                   })
+    //                 }
+    //               },
+    //             })
+    //           }
+    //         })
+    //       } else if (res.cancel) {
+    //         that.setData({
+    //           isok: 0,
+    //         })
+    //       }
+    //     }
+    //   })
+    // } else {
       that.setData({
         isok: 1
       })
-    }
+    // }
     /**
   * 根据返回内容，重新赋值
   */
@@ -171,7 +171,7 @@ Page({
         ischange: that.data.ischange + 1
       })
       wx.request({
-        url: 'http://stupidant.cn/queswerServer/addLiked',
+        url: 'http://' + hostConfig + '/queswerServer/addLiked',
         data: {
           'answer.content': that.data.anscontent
         },

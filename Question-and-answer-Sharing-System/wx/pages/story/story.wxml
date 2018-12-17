@@ -31,8 +31,8 @@
         <view class="feed-content">
           <view class="answer-body">
             <view class="answer-actions" bindtap="bindItemTap">
-              <text decode="{{true}}" wx:if="{{item.isfree==1}}">\n{{item.time}} &nbsp;-&nbsp;分享&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;免费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.lookNum}} 人查看</text>
-              <text decode="{{true}}" wx:elif="{{item.isfree==0}}">\n{{item.time}} &nbsp;-&nbsp;分享&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;¥ 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.lookNum}} 人查看</text>
+              <text decode="{{true}}" wx:if="{{item.isfree==1}}">\n{{item.time}} &nbsp;-&nbsp;社区提问&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;公开&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.lookNum}} 人查看</text>
+              <text decode="{{true}}" wx:elif="{{item.isfree==0}}">\n{{item.time}} &nbsp;-&nbsp;社区提问&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;关闭&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.lookNum}} 人查看</text>
             </view>
           </view>
         </view>

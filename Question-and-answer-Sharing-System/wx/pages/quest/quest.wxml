@@ -17,7 +17,7 @@
 
     <view class="quiz-info">
       <checkbox-group bindchange="checkChange">
-        <checkbox value="1" />是否免费
+        <checkbox value="1" />是否公开
       </checkbox-group>
     </view>
 

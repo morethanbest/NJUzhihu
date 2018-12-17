@@ -185,6 +185,8 @@ public class QuestionAction extends ActionSupport {
 		setQuestions(questionService.getAllQuestionsByTime());
 		Answer answer = null;
 		for (Question question : questions) {
+			if( question.getIs_free() == 0)
+				continue;
 			JSONObject jsond = new JSONObject();
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
@@ -241,6 +243,8 @@ public class QuestionAction extends ActionSupport {
 		setQuestions(questionService.getAllQuestionsByTime());
 		Answer answer = null;
 		for (Question question : questions) {
+			if( question.getIs_free() == 0)
+				continue;
 			JSONObject jsond = new JSONObject();
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
@@ -297,6 +301,8 @@ public class QuestionAction extends ActionSupport {
 		setQuestions(questionService.getAllQuestions());
 		Answer answer = null;
 		for (Question question : questions) {
+			if( question.getIs_free() == 0)
+				continue;
 			JSONObject jsond = new JSONObject();
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {
@@ -404,6 +410,8 @@ public class QuestionAction extends ActionSupport {
 		setQuestions(questionService.getQuestionsByTopic("%" + topic + "%"));
 		Answer answer = null;
 		for (Question question : questions) {
+			if( question.getIs_free() == 0)
+				continue;
 			JSONObject jsond = new JSONObject();
 			answer = answerService.findByQuesId(question);
 			if (answer != null) {

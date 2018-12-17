@@ -4,7 +4,7 @@ var app = getApp()
 Page({
   data: {
     feed: [],
-    navTab: ["筛选排序：", "免费优先", "围观数"], //排序模式
+    navTab: ["筛选排序：", "围观数"], //排序模式
     currentNavtab: 0, //所选模式index
     topic: null, //话题
     feed_length: 0
@@ -29,7 +29,7 @@ Page({
     var that = this;
     var idx = e.currentTarget.dataset.idx;
     console.log(idx);
-    if (idx == 2) {
+    if (idx == 1) {
       wx.request({
         url: 'http://' + hostConfig + '/queswerServer/listStoriesByLook',
         data: {},
@@ -46,23 +46,7 @@ Page({
         },
       })
     }
-    else if (idx == 1) {
-      wx.request({
-        url: 'http://' + hostConfig + '/queswerServer/listStoriesByFree',
-        data: {},
-        header: {//请求头
-          "Content-Type": "applciation/json"
-        },
-        method: "GET",
-        success: function (e) {
-          that.setData({
-            feed: e.data,
-            feed_length: e.data.length
-          });
-          console.log(e);
-        },
-      })
-    } else if (idx == 0) {
+     else if (idx == 0) {
       that.refresh();
     }
     //及时切换标签index
@@ -119,22 +103,22 @@ Page({
    */
   bindStory: function (e) {
     var $data = e.currentTarget.dataset
-    if ($data.isfree == 0) {
-      wx.showModal({
-        title: '支付1元ing',
-        content: '亲，确认查看ta的故事吗',
-        success: function (res) {
-          if (res.confirm) {
-            wx.navigateTo({
-              url: '../detailed/detailed?url=' + $data.url + '&title=' + $data.title + '&name=' + $data.name
-            })
-          }
-        }
-      })
-    } else {
+    // if ($data.isfree == 0) {
+    //   wx.showModal({
+    //     title: '支付1元ing',
+    //     content: '亲，确认查看ta的故事吗',
+    //     success: function (res) {
+    //       if (res.confirm) {
+    //         wx.navigateTo({
+    //           url: '../detailed/detailed?url=' + $data.url + '&title=' + $data.title + '&name=' + $data.name
+    //         })
+    //       }
+    //     }
+    //   })
+    // } else {
       wx.navigateTo({
-        url: '../detailed/detailed?url=' + $data.url + '&title=' + $data.title + '&name=' + $data.name + '&ismyself=0'
+        url: '../detailed/detailed?url=' + $data.url + '&title=' + $data.title + '&name=' + $data.name + '&ismyself=0&isfree=' + $data.isfree
       })
-    }
+    // }
   },
 })

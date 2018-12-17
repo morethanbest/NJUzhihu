@@ -325,17 +325,7 @@ public class StoryAction extends ActionSupport {
 		// 对查阅数进行更新
 		storyService.updateStory(sto);
 		JSONObject jsonn = new JSONObject();
-
-		if (sto.getIs_free() == 0) {
-			int account = sto.getUser().getAccount();
-			if (account > 1) {
-				jsonn.put("isok", 1);
-				sto.getUser().setAccount(account - 1);
-				userService.updateUser(sto.getUser());
-			} else {
-				jsonn.put("isok", 0);
-			}
-		}
+		jsonn.put("isok", 1);
 		jsonn.put("nameInf", sto.getUser_username());
 		jsonn.put("imgInf", sto.getUser_avatarUrl());
 		jsonn.put("titleInf", sto.getTitle());

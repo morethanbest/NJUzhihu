@@ -8,7 +8,7 @@ Page({
    * 关注用户情况
    */
   data: {
-    isFree:'￥1.00',
+    isFree:'关闭',
     is_free:0,
     ischange:0,
     userInfo: {},
@@ -64,13 +64,13 @@ Page({
     var that = this;
     if (that.data.ischange%2==0){
       that.setData({
-        isFree: '￥0.00',
+        isFree: '公开',
         is_free: 1,
         ischange: that.data.ischange + 1
       })
     }else{
       that.setData({
-        isFree: '￥1.00',
+        isFree: '关闭',
         is_free: 0,
         ischange: that.data.ischange + 1
       })

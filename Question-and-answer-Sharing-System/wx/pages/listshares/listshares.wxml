@@ -2,7 +2,7 @@
   <view class="search flex-wrp">
     <view class="search-left flex-item">
       <image src="../../images/search-index.png"></image>
-      <input placeholder="搜索我的分享话题" bindinput="searchInput" placeholder-class="search-placeholder" />
+      <input placeholder="搜索我的问题" bindinput="searchInput" placeholder-class="search-placeholder" />
     </view>
     <view class="search-right flex-item" bindtap="search">
       <image src="../../images/lighting.png"></image>
@@ -17,7 +17,7 @@
             <view class="avatar">
               <image src="{{item.img}}"></image>
             </view>
-            <text decode="{{true}}">我的分享 </text>
+            <text decode="{{true}}">我的问题 </text>
           </a>
           <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
         </view>
@@ -37,10 +37,10 @@
               </view>
               <view class="follow-it">
                 <view wx:if="{{item.isfree==0}}">
-                  <view class="ques-cost">类型：价值 ￥1</view>
+                  <view class="ques-cost">类型：关闭</view>
                 </view>
                 <view wx:elif="{{item.isfree==1}}">
-                  <view class="ques-cost">类型：免费</view>
+                  <view class="ques-cost">类型：公开</view>
                 </view>
               </view>
             </view>

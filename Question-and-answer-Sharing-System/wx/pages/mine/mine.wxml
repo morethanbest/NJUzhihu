@@ -16,33 +16,26 @@
 
   <view class="account-wrapper">
     <view class="profile" catchtap="toMake">
-      <view class="profile-item">我要提问</view>
+      <view class="profile-item">向ta提问</view>
       <image class="profile-arrow" src="/images/arrow.png"></image>
     </view>
     <view class="profile" catchtap="toShare">
-      <view class="profile-item">我要分享</view>
+      <view class="profile-item">向社区提问</view>
       <image class="profile-arrow" src="/images/arrow.png"></image>
     </view>
-    <view class="profile" catchtap="toMoney">
-      <view class="profile-item">我要充值</view>
-      <image class="profile-arrow" src="/images/arrow.png"></image>
-    </view>
-    <view class="profile" catchtap="toGet">
-      <view class="profile-item">我要提现</view>
-      <image class="profile-arrow" src="/images/arrow.png"></image>
-    </view>
+
   </view>
   <view class="account-wrapper">
     <view class="profile" catchtap="toQues">
-      <view class="profile-item">我的提问</view>
+      <view class="profile-item">我向ta的提问</view>
       <image class="profile-arrow" src="/images/arrow.png"></image>
     </view>
     <view class="profile" catchtap="toMyAnswer">
-      <view class="profile-item">我的回答</view>
+      <view class="profile-item">我对ta的回答</view>
       <image class="profile-arrow" src="/images/arrow.png"></image>
     </view>
     <view class="profile" catchtap="toMyShare">
-      <view class="profile-item">我的分享</view>
+      <view class="profile-item">我的社区提问</view>
       <image class="profile-arrow" src="/images/arrow.png"></image>
     </view>
   </view>

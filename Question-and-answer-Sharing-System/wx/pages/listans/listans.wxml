@@ -32,10 +32,10 @@
               </view>
               <view class="follow-it">
                 <view wx:if="{{item.ques_is_free==0}}">
-                  <view class="ques-cost">类型：￥1</view>
+                  <view class="ques-cost">类型：私密</view>
                 </view>
                 <view wx:elif="{{item.ques_is_free==1}}">
-                  <view class="ques-cost">类型：免费</view>
+                  <view class="ques-cost">类型：公开</view>
                 </view>
               </view>
             </view>

@@ -35,13 +35,13 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "问答",
+        "text": "单人问答",
         "iconPath": "images/data.png",
         "selectedIconPath": "images/data_focus.png"
       },
       {
         "pagePath": "pages/story/story",
-        "text": "分享",
+        "text": "社区问答",
         "iconPath": "images/component.png",
         "selectedIconPath": "images/component_focus.png"
       },

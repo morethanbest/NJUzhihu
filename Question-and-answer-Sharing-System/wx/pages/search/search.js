@@ -1,4 +1,4 @@
-var hostConfig = "localhost:8080"
+var hostConfig = "172.19.240.226:8080"
 Page({
   /**
    * 页面的初始数据

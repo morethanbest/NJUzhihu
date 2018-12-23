@@ -6,24 +6,24 @@
         <view class="ques-user" wx:if="{{ismine==0}}">{{dataBack.nameInf}}</view>
         <view class="ques-user" wx:elif="{{ismine==1}}">我</view>
         <view wx:if="{{dataBack.isfreeInf==0}}">
-          <view class="ques-cost">￥1</view>
+          <view class="ques-cost">关闭</view>
         </view>
         <view wx:elif="{{dataBack.isfreeInf==1}}">
-          <view class="ques-cost">免费</view>
+          <view class="ques-cost">公开</view>
         </view>
       </view>
     </view>
     <view class="ques-content">
       <text decode="{{true}}" wx:if="{{ismine==0}}">
-      ta的一句话概括：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.titleInf}}
+      ta的问题：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.titleInf}}
     </text>
       <text decode="{{true}}" wx:elif="{{ismine==1}}">
-      我的一句话概括：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.titleInf}}
+      我的问题：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.titleInf}}
     </text>
     </view>
     <view class="ques-content">
       <text decode="{{true}}">
-      往这儿看内容：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.contentInf}}
+      问题描述：\n &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{{dataBack.contentInf}}
    </text>
     </view>
     <view class="ans-info">
@@ -61,7 +61,7 @@
   <view class="container">
     <view class="comments">
       <view class="column-title">
-        那些旁观者的留言
+        回答
       </view>
       <view class="item touch-active" wx:for="{{comments}}" wx:key="" wx:for-item="c">
         <view class="i-left">
@@ -81,12 +81,12 @@
 
     <!--评论盒子-->
     <view class="cf-bg" catchtap="cemojiCfBg" style="display:{{cfBg ? 'block' : 'none'}}"></view>
-    <view class="comment-fixed">
+    <view class="comment-fixed" wx:if="{{isfree}}">
       <view class="cf-box">
         <view class="emoji-cell">
           <image catchtap="emojiShowHide" src='../../images/Smile.png'></image>
         </view>
-        <textarea class="cf-content" bindfocus="textAreaFocus" maxlength="140" bindblur="textAreaBlur" auto-height value="{{content}}" placeholder="我要评论" />
+        <textarea class="cf-content" bindfocus="textAreaFocus" maxlength="140" bindblur="textAreaBlur" auto-height value="{{content}}" placeholder="我要回答" />
         <text class="cf-send touch-active" bindtap="send">发送</text>
       </view>
 

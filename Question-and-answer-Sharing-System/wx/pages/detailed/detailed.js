@@ -1,5 +1,5 @@
 var util = require("../../utils/util")
-var hostConfig = "localhost:8080"
+var hostConfig = "172.19.240.226:8080"
 
 var app = getApp()
 Page({
@@ -16,6 +16,7 @@ Page({
     hiddenDeleLike: true,//取消点赞
     ismine: 0,
     isok: 0,
+    isfree: 0,
     name: null,
     ischange: 0,
     userMore: {},//服务器查询数据库所得用户信息
@@ -108,22 +109,10 @@ Page({
       method: "GET",
       success: function (res) {
         console.log(res.data);
-        if (res.data.isok == 0) {
-          wx.showToast({
-            title: '金币不足！',
-            icon: 'loading',
-            duration: 2000,
-            success: function () {
-              setTimeout(function () {
-                wx.switchTab({
-                  url: '../story/story'
-                })
-              }, 2000) //设置延迟时间
-            }
-          })
-        } else {
+
           that.setData({
-            dataBack: res.data
+            dataBack: res.data,
+            isfree: res.data.isfreeInf
           })
           console.log(res);
           wx.request({
@@ -158,7 +147,7 @@ Page({
               });
             },
           })
-        }
+        
       },
     })
     console.log("story_title:" + that.data.title)
@@ -398,7 +387,7 @@ Page({
           content: ""
         })
       }
-    }, 100)
+    }, 1000)
   },
   emojiScroll: function (e) {
     console.log(e)

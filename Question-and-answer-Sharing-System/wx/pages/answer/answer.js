@@ -1,14 +1,14 @@
 //获取应用实例
 var app = getApp();
 var util = require('../../utils/util.js');
-var hostConfig = "localhost:8080"
+var hostConfig = "172.19.240.226:8080"
 var app = getApp()
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    isFree: '￥1.00',//默认问题价格为1元人民币
+    isFree: '私密',//默认问题价格为1元人民币
     is_free: 0,//问题是否免费
     userInfo: {},
     hiddenToast: true,

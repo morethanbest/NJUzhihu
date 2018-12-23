@@ -41,7 +41,6 @@
           <view class="answer-body">
             <view>
               <text class="answer-txt" aid="{{answer_id}}" wx:if="{{item.ques_is_free==1}}">{{item.ans_content}}</text>
-              <text class="answer-txt" aid="{{answer_id}}" wx:elif="{{item.ques_is_free==1}}">亲，支付1元即可查看ta的回答~ </text>
             </view>
             <view class="answer-actions">
               <view class="like dot">
@@ -51,11 +50,8 @@
                 <a>{{item.ans_time}} 创建 </a>
               </view>
               <view class="follow-it">
-                <view wx:if="{{item.ques_is_free==0}}">
-                  <view class="ques-cost"> 价值 ￥1</view>
-                </view>
-                <view wx:elif="{{item.ques_is_free==1}}">
-                  <view class="ques-cost">免费</view>
+                <view wx:if="{{item.ques_is_free==1}}">
+                  <view class="ques-cost"> 公开</view>
                 </view>
               </view>
             </view>

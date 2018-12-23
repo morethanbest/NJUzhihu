@@ -1,5 +1,5 @@
 var app = getApp()
-var hostConfig = "localhost:8080"
+var hostConfig = "172.19.240.226:8080"
 Page({
   data: {
     likeUrl: "../../images/good-filling.png",

@@ -1,10 +1,10 @@
 var util = require('../../utils/util.js')
-var hostConfig = "localhost:8080"
+var hostConfig = "172.19.240.226:8080"
 var app = getApp()
 Page({
   data: {
     feed: [],
-    navTab: ["筛选排序：", "免费优先", "获赞数"], // 提供排序模式
+    navTab: ["筛选排序：", "获赞数"], // 提供排序模式
     currentNavtab: 0, //默认选择的模式index
     isanswer: 0, //是否已经回答
     feed_length: 0
@@ -25,26 +25,9 @@ Page({
     var that = this;
     var idx = e.currentTarget.dataset.idx;
     console.log(idx);
-    if (idx == 2) {
+    if (idx == 1) {
       wx.request({
         url: 'http://' + hostConfig + '/queswerServer/listQuestionsByLike',
-        data: {},
-        header: {
-          "Content-Type": "applciation/json"
-        },
-        method: "GET",
-        success: function (e) {
-          that.setData({
-            feed: e.data,
-            feed_length: e.data.length
-          });
-          console.log(e);
-        },
-      })
-    }
-    else if (idx == 1) {
-      wx.request({
-        url: 'http://' + hostConfig + '/queswerServer/listQuestionsByTime',
         data: {},
         header: {
           "Content-Type": "applciation/json"
